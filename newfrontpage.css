@@ -1,0 +1,439 @@
+*{
+  box-sizing: border-box;
+  position: relative;
+  /* border: 1px solid black; */
+}
+
+html,body{
+  font-family: '微軟正黑體';
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;   
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+ul{
+  /* 預設符號消失margin padding歸零 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* layout */
+/* .container{
+  width: 960px;
+  height: 100%;
+
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+} */
+/* utility */
+/* 這一段是用在消除navbar消失的高度 */
+.header{
+position: fixed;   /* 固定位置 */
+top: 0;            /* 距離視窗頂部 0px */
+left: 0;           /* 左側對齊 */
+width: 100%;       /* 讓 header 佔滿整個寬度 */
+background-color: white;  /* 背景顏色（避免透明影響內容） */
+z-index: 1000;     /* 確保 header 在最上層，不會被其他內容蓋住 */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 增加陰影，讓 header 更有層次 */
+opacity: 0.5;
+}
+.header:hover{
+opacity: 1 ;
+}
+
+.header h1{
+color: #F5F5F5;
+display: block;
+width:200px;
+height: 50px;
+line-height: 50px;
+/* transform: translate(-50% -50%); */
+/* 詢問這邊的對齊技巧 */
+left: 50px;
+transform: translateY(-45%);
+}
+
+
+.clearfix{
+  content:'';
+  display: block;
+  clear: both;
+}
+
+.navbar{
+  height: 64px;
+  width: 100%;
+  background-color: #C9A600;
+  /* 如果是滿版的時候會有效果 */
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-around;
+}
+/* compomnet */
+/* navbar */
+.navbar .logo{
+  /* 原本上面預設是display:inline，要設為display: inline-block;才會跑出方塊 */
+  /* display: inline-block; */
+  height: 50px;
+  width: 50px;
+  /* border: solid 1px; */
+  background-image: url("https://live.staticflickr.com/65535/54249634416_f72dede18a_z.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* 將logo跟nav分別排在左右，這時候原本的nav高度會消失 */
+  /* float: left; */
+  /* 將logo置中((64px-50px)/2=7px) */
+  margin-top: 7px;
+  align-items: center;
+}
+
+.navbar .nav{
+  /* border: 1px solid black; */
+  /* float: right; */
+  display: flex;
+}
+
+/* 讓nav-item變成橫向排列 */
+.navbar .nav .nav-item{
+  /* border: 1px solid black; */
+  /* float: left; */
+  display: inline-block; 
+  /* 這種寫法應該也可以 */
+  /* 製造出左邊空格 */
+  margin-left: 32px;
+}
+
+.navbar .nav .nav-link{
+  /* border: 1px solid black; */
+  display: inline-block; 
+  color: #FFFFFF;
+  /* 製作一個行高24px,padding上下20px的按鈕(總高可點擊範圍64px) */
+  line-height: 64px;
+  /* padding: 20px 0; */
+  /* height: 62px; */
+  transition: all 0.3s;
+}
+
+.navbar .nav :hover{
+color:#704214 ;
+opacity: 1;
+font-weight: 900;
+}
+
+/* 利用偽元素製作底線 */
+.navbar .nav .nav-link::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: #704214;
+  transition: all 0.3s;
+}
+
+.navbar .nav .nav-link:hover::after{
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* .navbar .login {
+詢問svg技巧，是否只能在html裡去做更改
+width: 30px;
+height: 30px;
+position: absolute;
+right: 10px;
+top: 20px;
+border: solid 1px black;
+background-color: #c9a600;
+cursor: pointer;
+background-image: url("./img/reshot-icon-user-QLCUYJBKM3.svg");
+background-size: contain;
+background-repeat: no-repeat;
+opacity: 0.7;
+}
+
+.navbar .login:hover{
+opacity: 1;
+transition-duration: 0.5s;
+} */
+/* 這邊原本使用圖片方式，後來改用fontawsome效果更好 */
+
+.navbar .login1{
+width: 40px;
+height: 40px;
+color: white;
+font-size: 30px;
+justify:center;
+top: 15px;
+/* opacity: 0.7; */
+}
+
+.navbar .login1:hover{
+opacity: 1;
+transition-duration: 0.5s;
+color:#704214;
+cursor: pointer;
+}
+
+/* 導覽列結束- */
+/* ----------------------- */
+/* 中間區塊開始 */
+
+.container{
+margin-top: 60px;
+text-align: center;
+max-width: 1024px;
+margin-left: auto;
+margin-right: auto;
+background-color: #F5F5F5;
+margin-bottom: 10px;
+margin-top: 10px;
+border-radius: 5px;
+}
+
+/* 主圖開始 */
+.mainmessage{
+margin-top: 80px;
+}
+
+.mainmessage .mainpic {
+margin-top: 10px;
+height: 300px;
+background-image: url(https://cdn.pixabay.com/photo/2019/02/03/16/52/buildings-3973014_1280.jpg);
+background-size: cover;
+background-position: center;
+opacity: 0.5;
+border-radius: 5px ;
+}
+.mainmessage .maindes {
+position: absolute;
+top: 0;
+left: 0;
+background-color: transparent;
+}
+.mainmessage .maindes h2 {
+font-size: 90px;
+margin: 10px 0px 0px 10px;
+color: #333333;
+background-color: transparent;
+opacity: 0;
+top: 10px;
+animation: ani1 2s forwards;
+animation-delay: 1s;
+}
+.mainmessage .maindes h3 {
+font-size: 40px;
+margin: 0;
+color: #333333;
+left: 30px;
+background-color: transparent;
+opacity: 0;
+/* top: 10px; */
+animation: ani1 2s forwards;
+animation-delay: 2.5s;
+}
+
+@keyframes ani1{
+0%{
+  opacity: 0;
+  top: 10px;
+}
+100%{
+  opacity: 1;
+  top: 0px;
+}
+}
+
+/* 主圖結束 */
+/* ----------------------- */
+/* 商品卡開始 */
+.image-container{
+/* border:solid 1px black; */
+/* 這邊的100%是參照block */
+width: 100%;
+border-radius: 5px 5px 0 0 ;
+}
+
+.image-container::before{
+content: '';
+/* display要設block才能正確顯示偽元素 */
+display: block;
+/* 做出4:3的圖片框 */
+width: 100%;
+padding-bottom: 75%;
+/* border:solid 1px red; */
+border-radius: 5px 5px 0 0;
+}
+
+.image-container .image{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+border-radius: 5px 5px 0 0;
+}
+
+
+.image-container .image.a{
+background-image: url(//live.staticflickr.com/65535/54284720190_fcf5089e87_n.jpg);
+}
+.image-container .image.b{
+background-image: url(//live.staticflickr.com/65535/54284541158_ba74f34d91.jpg);
+}
+.image-container .image.c{
+background-image: url(//live.staticflickr.com/65535/54284291986_3695754ee0_n.jpg);
+}
+.image-container .image.d{
+background-image: url(//live.staticflickr.com/65535/54284720190_fcf5089e87_n.jpg);
+}
+
+
+.blocks {
+/* height: initial; */
+margin-top: 20px;
+display: flex;
+flex-wrap: wrap;
+border: 4px;
+}
+
+.blocks .block {
+height: 200px;
+width: 30%;
+display: inline-block;
+margin: 10px;
+/* margin-bottom: 120px; */
+border-radius: 5px;
+background-size: cover;
+vertical-align: top;
+cursor: pointer;
+margin-bottom: 160px;
+}
+
+.info{
+border-radius: 0 0 3px 3px
+}
+
+.info .tour-name{
+margin: 0;
+padding: 3px;
+font-size: 22px;
+font-weight: 800;
+background-color: #704214;
+color: whitesmoke;
+opacity: 0.7;
+border-radius: 0 0 3px 3px;
+}
+
+.tour-des{
+font-size: 16px;
+line-height: 18px;
+text-align: justify;
+background-color: #F5F5F5;
+border: solid 1px black;
+border-radius: 3px;
+padding: 5px;
+top: -10px;
+opacity: 0;
+transition-duration: 1s;
+}
+
+.blocks .block:hover .tour-des{
+opacity: 1;
+top: 0;
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.blocks .block:hover{
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.blocks .block:hover .image-container{
+box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.blocks .block:hover .info{
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 商品卡結束 */
+/* 中間區塊結束 */
+/* 詢問問題，商品卡使用flex以後是只能透過控制margin-bottom去控制底下的空間高度 */
+/* 要怎麼才可以將商品卡有一次性陰影 */
+/* ----------------------- */
+/* 底部開始 */
+
+.bottom {
+/* height: 150px; */
+/* margin: 20px; */
+/* 這邊無法正確出現100% */
+width: 100%;
+background-color: #C49A00;
+border-radius: 0px 0px 5px 5px;
+display: flex;
+/* border: solid 1px black; */
+}
+/* 上下空間無法消除 */
+.bottom .block {
+margin: 0px 10px;
+padding: 20px;
+/*   display: inline-block; */
+vertical-align: top;
+width: 45%;
+background-color: #C49A00;
+color: #704214;
+/* height: 150px;   */
+}
+
+.bottom h6 {
+font-size: 16px;
+margin: 0;
+text-align: left;
+padding: 10px;
+position: relative;
+left: auto;
+right: auto;
+background-color: #C49A00;
+}
+
+.contanct{
+margin-top:20px;
+}
+.bottom h5 {
+font-size: 32px;
+background-color: #C49A00;
+margin: 0;
+text-align: center;
+}
+
+
+
+/* 不知道為什麼一度背後空白無法填滿，以及該如何更改icon顏色，試過fill、color都無效 */
+.socialmedia{
+display: flex;
+justify-content: center;
+margin: 0;
+font-size: 50px;
+letter-spacing: 10px;
+margin-top: 10px;
+background-color: #C49A00;
+}
+
+.socialmedia a{
+margin-left: 20px;
+color: #704214;
+}
+/* 底部結束 */

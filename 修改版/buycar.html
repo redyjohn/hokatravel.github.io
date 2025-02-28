@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/mormilizecss.css">
+    <link rel="stylesheet" href="./buycar.css">
+    <script src="https://kit.fontawesome.com/ad01398954.js" crossorigin="anonymous"></script>
+    <title>好客旅行社</title>
+</head>
+<script src="./buycar.js" defer></script>
+<body>
+    <header class="header">
+        <div class="navbar"><!--導覽列開始-->
+            <div class="navbar clearfix">
+                <a href="" class="logo">
+                    <h1>好客旅行社</h1>
+                </a>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">STORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+                <!-- <a href="" class="login"></a> -->
+                <div class="login1"> 
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+        </div><!--導覽列結束-->
+    </header>
+    <!-- 中間開始 -->
+    <div class="container">
+        <div class="titles">
+            <div class="title l">
+                <img src="//live.staticflickr.com/65535/54284533899_6541d9fa4a_n.jpg" alt="澎湖北海魅力3日遊">
+            </div>
+            <div class="title r">
+                <h1>澎湖北海魅力3日遊</h1>
+                <h3>專車環島遊澎湖+吉貝勁爆水上活動七合一+市區觀光+七餐+導覽+住宿兩晚~~每人6600元起(老人小孩另有優惠)</h3>
+            </div>
+            
+        </div>
+        <hr style="background-color: #704214;; height: 2px;width: 95%;">
+        <div class="tour-booking">
+            <label for="tour-date">選擇出團日期：</label>
+            <select id="tour-date">
+                <option value="2025-02-20">2025/02/20</option>
+                <option value="2025-02-21">2025/02/21</option>
+                <option value="2025-02-22">2025/02/22</option>
+            </select>
+            <p>剩餘人數：<span id="remaining-spots">-</span>人</p>
+        
+            <div class="counters">
+                <div class="counter">
+                    <p>成人人數：</p>
+                    <button class="decrease" data-type="adult">-</button>
+                    <span id="adult-count">0</span>
+                    <button class="increase" data-type="adult">+</button>
+                </div>
+            
+                <div class="counter">
+                    <p>12歲以下幼童 / 65歲以上長者：</p>
+                    <button class="decrease" data-type="child">-</button>
+                    <span id="child-count">0</span>
+                    <button class="increase" data-type="child">+</button>
+                </div>
+
+                <div class="counter">
+                    <p>總計人數：<span id="total-count">0</span></p>
+                </div>
+            </div>
+        
+            
+            
+            <div class="totalprice">
+                <div class="price">
+                    <p>成人費用：</p>
+                    <span id="adult-price">0</span>
+                </div>
+            
+                <div class="price">
+                    <p>12歲以下幼童 / 65歲以上長者費用：</p>
+                    <span id="child-price">0</span>
+                </div>
+                <div class="price">
+                    <p>總金額：<span id="total-price">0</span></p>
+                </div>
+            </div>       
+        </div><!-- tour-booking結束 -->
+        <div class="buy-btn">
+            <h1>確認送出</h1>
+        </div>
+    </div><!-- container結束 -->
+    <!-- 中間結束 -->
+    <div class="bottom"><!--底部開始-->
+        <div class="block contanct">
+            <h5>聯繫我們</h5>
+            <div class="socialmedia">
+                <a href="#">
+                    <i class="fa-brands fa-facebook "></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram "></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-line "></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="block info">
+            <h6>好客旅行社股份有限公司<br>負責人：曾聖傑<br>電話：04-1234-5678<br>地址：台中市西區臺灣大道一段999號99樓 (R.O.C)<br>交觀甲種註冊編號 999999<br>品保甲中 0001 號</h6>
+        </div>
+    </div><!--底部結束-->      
+    
+</body>
+</html>
+
+
+<!-- 總結排版方式還不熟悉，下一版本全部使用flex排版避免混亂 -->

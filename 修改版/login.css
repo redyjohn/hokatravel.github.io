@@ -1,0 +1,278 @@
+*{
+  box-sizing: border-box;
+  position: relative;
+  /* border: 1px solid black; */
+}
+
+html,body{
+  font-family: '微軟正黑體';
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;   
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+ul{
+  /* 預設符號消失margin padding歸零 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+position: fixed;   /* 固定位置 */
+top: 0;            /* 距離視窗頂部 0px */
+left: 0;           /* 左側對齊 */
+width: 100%;       /* 讓 header 佔滿整個寬度 */
+background-color: white;  /* 背景顏色（避免透明影響內容） */
+z-index: 1000;     /* 確保 header 在最上層，不會被其他內容蓋住 */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 增加陰影，讓 header 更有層次 */
+opacity: 0.5;
+}
+.header:hover{
+opacity: 1 ;
+}
+
+.header h1{
+color: #F5F5F5;
+display: block;
+width:200px;
+height: 50px;
+line-height: 50px;
+/* transform: translate(-50% -50%); */
+/* 詢問這邊的對齊技巧 */
+left: 50px;
+transform: translateY(-45%);
+}
+
+
+.clearfix{
+  content:'';
+  display: block;
+  clear: both;
+}
+
+.navbar{
+  height: 64px;
+  width: 100%;
+  background-color: #C9A600;
+  /* 如果是滿版的時候會有效果 */
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-around;
+}
+/* compomnet */
+/* navbar */
+.navbar .logo{
+  /* 原本上面預設是display:inline，要設為display: inline-block;才會跑出方塊 */
+  /* display: inline-block; */
+  height: 50px;
+  width: 50px;
+  /* border: solid 1px; */
+  background-image: url("//live.staticflickr.com/65535/54249634416_f72dede18a_b.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* 將logo跟nav分別排在左右，這時候原本的nav高度會消失 */
+  /* float: left; */
+  /* 將logo置中((64px-50px)/2=7px) */
+  margin-top: 7px;
+  align-items: center;
+  
+}
+
+
+.navbar .nav{
+  /* border: 1px solid black; */
+  /* float: right; */
+  display: flex;
+}
+
+/* 讓nav-item變成橫向排列 */
+.navbar .nav .nav-item{
+  /* border: 1px solid black; */
+  /* float: left; */
+  display: inline-block; 
+  /* 這種寫法應該也可以 */
+  /* 製造出左邊空格 */
+  margin-left: 32px;
+}
+
+.navbar .nav .nav-link{
+  /* border: 1px solid black; */
+  display: inline-block; 
+  color: #FFFFFF;
+  /* 製作一個行高24px,padding上下20px的按鈕(總高可點擊範圍64px) */
+  line-height: 64px;
+  /* padding: 20px 0; */
+  /* height: 62px; */
+}
+/* 利用偽元素製作底線 */
+.navbar .nav .nav-link::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: #FFFFFF;
+  transition: all 0.3s;
+}
+
+.navbar .nav .nav-link:hover::after{
+  width: 100%;
+}
+
+.navbar .login {
+width: 30px;
+height: 30px;
+/* position: absolute; */
+/* right: 10px; */
+top: 20px;
+/* border: solid 1px black; */
+background-color: #c9a600;
+cursor: pointer;
+background-image: url("./img/reshot-icon-user-QLCUYJBKM3.svg");
+background-size: contain;
+background-repeat: no-repeat;
+opacity: 0.7;
+}
+
+.navbar .login:hover{
+opacity: 1;
+transition-duration: 0.5s;
+}
+
+/* 註冊系統開始 */
+
+.container{
+margin: 120px auto 60px;
+text-align: center;
+max-width: 1024px;
+height: 100%;
+background-color: #F5F5F5;
+border-radius: 5px;
+/* border: solid 1px black; */
+}
+.loginGroup{
+justify-self:center;
+text-align: end;
+position: relative;
+border: solid 0.5px orange;
+padding: 10px;
+border-radius:0 0 5px 5px;  
+}
+
+.loginGroup:hover{
+box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 偽元素不知道為什麼跟下面差一點點 */
+.loginGroup::before{
+content: '';
+width: 100%;
+left: 0;
+top: -10px;
+height: 15px;
+background-color: orange;
+position: absolute;
+/* border: solid 1px black; */
+border-radius: 5px 5px 0 0;
+}
+
+.copyright{
+text-align: center;
+color: #a3a2a3;
+font-size: 14px;
+}
+
+input{
+padding: 5px;
+border:solid 1px #ccc;
+border-radius: 5px;
+}
+
+.btn-sign{
+padding: 8px 15px;
+margin-top: 20px;
+cursor: pointer;
+border-radius: 4px;
+border:1px solid #ccc
+}
+
+.btn-sign:hover{
+background-color: #C49A00;
+border:1px solid #C49A00;
+box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 註冊系統結束 */
+
+/* bottom開始 */
+
+
+.bottom {
+/* height: 150px; */
+/* margin: 20px; */
+padding: 0px;
+background-color: #C49A00;
+border-radius: 0px 0px 5px 5px;
+}
+/* 上下空間無法消除 */
+.bottom .block {
+margin: 0px 10px;
+padding: 20px;
+display: inline-block;
+vertical-align: top;
+width: 45%;
+background-color: #C49A00;
+color: #704214;
+/* height: 150px;   */
+}
+
+.bottom h6 {
+font-size: 16px;
+margin: 0;
+text-align: left;
+padding: 10px;
+position: relative;
+left: auto;
+right: auto;
+background-color: #C49A00;
+}
+
+.contanct{
+margin-top:20px;
+}
+.bottom h5 {
+font-size: 32px;
+background-color: #C49A00;
+margin: 0;
+text-align: center;
+}
+
+
+
+/* 不知道為什麼背後空白無法填滿，以及該如何更改icon顏色，試過fill、color都無效 */
+.socialmedia{
+display: flex;
+justify-content: center;
+margin: 0;
+font-size: 50px;
+letter-spacing: 10px;
+margin-top: 10px;
+background-color: #C49A00;
+}
+
+.socialmedia a{
+margin-left: 20px;
+color: #704214;
+}
+
+/* bottom結束 */

@@ -1,0 +1,246 @@
+* {
+    /* border: solid 1px black; */
+    font-family: 微軟正黑體;
+    position: relative;
+    background-color: #FFF4E9;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    background-color: #C49A00;
+    /* 背景白色無法去除 */
+  }
+  .container {
+    font-size: 0;
+    text-align: center;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF4E9;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .head {
+    background-color: #fff;
+    height: 200px;
+    background-color: #c9a600;
+    border-radius: 5px;
+    
+  }
+  .head h1 {
+    height: 150px;
+    line-height: 150px;
+    font-size: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    letter-spacing: 10px;
+    vertical-align: top;
+    display: inline-block;
+    vertical-align: center;
+    margin: 0px 20px;
+    background-color: #c9a600;
+    color: #fdf4e2;
+    text-align: left;
+    left: -100px;
+  }
+  .head .icon {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: initial;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    left: -100px;
+    /* border: solid 1px black; */
+
+  }
+
+  .head .login {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    /* border: solid 1px black; */
+    background-color: #c9a600;
+    cursor: pointer;
+    color: white;
+    }
+  .head .login:hover{
+    width: 50px;
+    height: 50px;
+    transition-duration: 0.5s;
+  }
+
+  /* .head .nav{
+    font-size: 25px;
+    position: absolute;
+    height: 20px;
+    z-index: 1;
+    color: #000;
+  } */
+  
+
+  .mainmessage{
+    /* margin-top: 20px; */
+  }
+  
+  .mainmessage .mainpic {
+    margin-top: 10px;
+    height: 300px;
+    background-image: url(https://cdn.pixabay.com/photo/2019/02/03/16/52/buildings-3973014_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    /* border-radius: 5px ; */
+  }
+  .mainmessage .maindes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+  .mainmessage .maindes h2 {
+    font-size: 90px;
+    margin: 10px 0px 0px 10px;
+    color: #333333;
+    background-color: transparent;
+  }
+  .mainmessage .maindes h3 {
+    font-size: 40px;
+    margin: 0;
+    color: #333333;
+    left: 30px;
+    background-color: transparent;
+  }
+  
+  .blocks {
+    /* height: initial; */
+    margin-top: 20px;
+  }
+  
+  .blocks .block {
+    height: 200px;
+    width: 30%;
+    display: inline-block;
+    margin: 10px;
+    margin-bottom: 120px;
+    border-radius: 5px 5px 0px 0px;
+    background-size: cover;
+    vertical-align: top;
+    cursor: pointer;
+  }
+
+  .blocks .block:hover {
+    box-shadow: 2px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .block:hover h4{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .block h4 {
+    /* margin莫名下方會有26px? */
+    margin: 200px 0px 0px 0px ;
+    height: 20px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #704214;
+    color: #FFFFFF;
+    border-radius:0px 0px 5px 5px;
+    opacity: 0.7;
+  
+  }
+  .block p {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius:5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    margin-top: -5px;
+  }
+  /* .block p {
+    transition: transform 2s;
+  } */
+
+  .blocks .block:hover p{
+    opacity: 1;
+    margin-top: 5px;
+    transition-duration: 0.7s;
+  }
+
+  
+  .block.a{
+    background-image: url("https://live.staticflickr.com/65535/54284720190_fcf5089e87_n.jpg");
+    /* background: no-repeat; */
+
+    }
+  .block.b{
+    background-image: url("https://live.staticflickr.com/65535/54284541158_ba74f34d91.jpg");
+
+  }
+  .block.c{
+    background-image: url("https://live.staticflickr.com/65535/54284291986_3695754ee0_n.jpg");
+
+  }
+  .block.d{
+    background-image: url("https://live.staticflickr.com/65535/54284720190_fcf5089e87_n.jpg");
+    
+  }
+
+
+  /* 隱藏無內容的板塊，維持版面平衡，如果有新增內容可以再釋放出來 */
+  .block.e,.f{
+    opacity: 0;
+  }
+  .bottom {
+    /* height: 150px; */
+    /* margin: 20px; */
+    padding: 0px;
+    background-color: #C49A00;
+    border-radius: 0px 0px 5px 5px;
+  }
+  /* 上下空間無法消除 */
+  .bottom .block {
+    margin: 0px 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    background-color: #C49A00;
+    /* height: 150px;   */
+  }
+  
+  .bottom h6 {
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    left: auto;
+    right: auto;
+    background-color: #C49A00;
+  }
+  .bottom h5 {
+    font-size: 32px;
+    background-color: #C49A00;
+    margin-bottom: 10px;
+  }
+/* 不知道為什麼背後空白無法填滿，以及該如何更改icon顏色，試過fill、color都無效 */
+  .socialmedia{
+    margin: 0;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-top: 10px;
+    background-color: #C49A00;
+  }
+  

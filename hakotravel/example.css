@@ -1,14 +1,14 @@
 /* 通用樣式 */
 body {
-  font-family: "Noto Sans", sans-serif; /* 使用 Noto Sans 字體 */
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f8f9fa; /* 淺灰色背景 */
+  background-color: #f8f9fa;
 }
 
 /* 導航欄樣式 */
 .navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
@@ -19,46 +19,46 @@ body {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff !important; /* 品牌顏色 */
+  color: #007bff !important;
 }
 
 .nav-link {
   font-size: 1.1rem;
-  color: #333 !important; /* 導航連結顏色 */
+  color: #333 !important;
 }
 
 .nav-link:hover {
-  color: #007bff !important; /* 滑鼠懸停時的顏色 */
+  color: #007bff !important;
 }
 
 /* 輪播圖樣式 */
 .carousel-item img {
-  height: 400px; /* 固定輪播圖高度 */
-  object-fit: cover; /* 裁剪圖片以填滿容器 */
+  height: 400px;
+  object-fit: cover;
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;
   border-radius: 5px;
 }
 
 /* 行程推薦卡片樣式 */
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加動畫效果 */
-  border: none; /* 移除邊框 */
-  border-radius: 10px; /* 圓角 */
-  overflow: hidden; /* 隱藏超出內容 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* 滑鼠懸停時上移 */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-  height: 200px; /* 固定卡片圖片高度 */
-  object-fit: cover; /* 裁剪圖片以填滿容器 */
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-title {
@@ -72,6 +72,42 @@ body {
   color: #666;
 }
 
+/* 登入與註冊卡片樣式 */
+.card {
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs .nav-link {
+  color: #6e8efb;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #6e8efb;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.btn-primary {
+  background-color: #6e8efb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #5a7be8;
+}
+
+.btn-success {
+  background-color: #a777e3;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #925fd4;
+}
+
 /* 聯絡表單樣式 */
 form {
   max-width: 600px;
@@ -79,7 +115,7 @@ form {
   padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-label {
@@ -95,12 +131,12 @@ form {
 
 .form-control:focus {
   border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* 聚焦時的陰影 */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 /* 頁尾樣式 */
 footer {
-  background-color: #343a40; /* 深色背景 */
+  background-color: #343a40;
   color: #fff;
   padding: 2rem 0;
   margin-top: 3rem;
@@ -114,14 +150,14 @@ footer p {
 /* 響應式設計 */
 @media (max-width: 768px) {
   .carousel-item img {
-    height: 300px; /* 在小屏幕上調整輪播圖高度 */
+    height: 300px;
   }
 
   .card {
-    margin-bottom: 1.5rem; /* 在小屏幕上增加卡片間距 */
+    margin-bottom: 1.5rem;
   }
 
   form {
-    padding: 1rem; /* 在小屏幕上減少表單內邊距 */
+    padding: 1rem;
   }
 }

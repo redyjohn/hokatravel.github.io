@@ -228,7 +228,177 @@ footer p {
   }
 }
 
+/* 推薦行程頁面樣式 */
+.toptitle{
+  margin-top: 8rem;
+}
 
-.maindes{
-  margin-top: 6rem;
+.row.align-items-center {
+  margin-bottom: 4rem; /* 增加行與行之間的間距 */
+}
+
+.row.align-items-center img {
+  border-radius: 10px; /* 圖片圓角 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row.align-items-center img:hover {
+  transform: scale(1.05); /* 圖片懸停放大效果 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.row.align-items-center h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.row.align-items-center p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.row.align-items-center ul {
+  margin-bottom: 1.5rem;
+}
+
+.row.align-items-center ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.row.align-items-center ul li i {
+  margin-right: 8px;
+  color: var(--sec-color);
+}
+
+.btn-primary {
+  background-color: var(--sec-color);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-color);
+}
+
+/* 行程詳情頁面樣式 */
+.tour-detail{
+  background-color: #D2D2D0;
+}
+.tour-detail .carousel {
+  height: 500px; /* 增加輪播圖高度 */
+  overflow: hidden;
+}
+
+.tour-detail .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-detail h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+
+.tour-detail h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.tour-detail p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.tour-detail ul {
+  margin-bottom: 1.5rem;
+}
+
+.tour-detail ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.tour-detail .highlight-list li {
+  list-style: none;
+  margin-left: -1.5rem;
+}
+
+.tour-detail .highlight-list li i {
+  color: var(--sec-color);
+  margin-right: 0.5rem;
+}
+
+.tour-detail .info-card {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tour-detail .day ul, .tour-detail .day li{
+  color: var(--btn-color);
+}
+
+.tour-detail .day li{
+  font-size: 0.75rem;
+}
+
+
+.tour-detail .info-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+
+.tour-detail .info-card .btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.tour-detail .itinerary .day {
+  margin-bottom: 2rem;
+}
+
+.tour-detail .itinerary .day h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.tour-detail .itinerary .day p {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.tour-detail .pre-trip,
+.tour-detail .cost-include,
+.tour-detail .notes {
+  margin-bottom: 2rem;
+}
+
+.tour-detail .pre-trip h3 i,
+.tour-detail .cost-include h3 i,
+.tour-detail .notes h3 i {
+  margin-right: 0.5rem;
 }

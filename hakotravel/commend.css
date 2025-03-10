@@ -1,0 +1,72 @@
+/* 必遊行程頁面專屬樣式 */
+.must-do-tours {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .must-do-tours h1 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .must-do-tours .tour-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .must-do-tours .tour-card {
+    background: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .must-do-tours .tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .must-do-tours .tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .must-do-tours .tour-card .card-content {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .must-do-tours .tour-card h3 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+  }
+  
+  .must-do-tours .tour-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .must-do-tours .btn-tour {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: var(--light-color);
+    background-color: var(--btn-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .must-do-tours .btn-tour:hover {
+    background-color: var(--sec-color);
+  }
+  

@@ -1,9 +1,28 @@
 /* 通用樣式 */
+
+/* *{
+  border: solid 1px black;
+} */
+
 body {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f8f9fa;
+}
+
+/* 主要顏色:
+logo&大標題#C9A600
+按鈕#8D6346
+文字or深色背景#222823
+文字or淺色背景#FFFFFF
+其他標示or配色#5C9EAD */
+:root {
+  --main-color: #C9A600;
+  --btn-color:#8D6346;
+  --dark-color:#222823;
+  --light-color:#FFFFFF;
+  --sec-color:#5C9EAD;
 }
 
 /* 導航欄樣式 */
@@ -16,19 +35,33 @@ body {
   z-index: 1000;
 }
 
+.logo-img {
+  height: 50px; /* 調整圖片高度 */
+  /* margin-right: 5px; 與文字保持間距 */
+  vertical-align: middle;
+}
+
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff !important;
+  color: var(--main-color) !important;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
   font-size: 1.1rem;
-  color: #333 !important;
+  color: var(--dark-color) !important;
 }
 
 .nav-link:hover {
-  color: #007bff !important;
+  color: var(--sec-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--main-color);
+  border: var(--main-color);
 }
 
 /* 輪播圖樣式 */
@@ -75,37 +108,37 @@ body {
 /* 登入與註冊卡片樣式 */
 .card {
   border-radius: 15px;
-  background: #ffffff;
+  background: var(--light-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-tabs .nav-link {
-  color: #6e8efb;
+  color: var(--sec-color);
   font-weight: bold;
 }
 
 .nav-tabs .nav-link.active {
-  background-color: #6e8efb;
-  color: white;
+  background-color: var(--sec-color);
+  color: var(--light-color);
   border-radius: 10px 10px 0 0;
 }
 
 .btn-primary {
-  background-color: #6e8efb;
+  background-color: var(--sec-color);
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #5a7be8;
+  background-color: var(--btn-color);
 }
 
 .btn-success {
-  background-color: #a777e3;
+  background-color: var(--sec-color);
   border: none;
 }
 
 .btn-success:hover {
-  background-color: #925fd4;
+  background-color: var(--btn-color);
 }
 
 /* 聯絡表單樣式 */
@@ -113,14 +146,14 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #fff;
+  background-color: var(--light-color);
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-label {
   font-weight: bold;
-  color: #333;
+  color: var(--dark-color);
 }
 
 .form-control {
@@ -130,14 +163,14 @@ form {
 }
 
 .form-control:focus {
-  border-color: #007bff;
+  border-color: var(--sec-color);
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 /* 頁尾樣式 */
 footer {
-  background-color: #343a40;
-  color: #fff;
+  background-color: var(--dark-color);
+  color: var(--light-color);
   padding: 2rem 0;
   margin-top: 3rem;
 }
@@ -145,6 +178,39 @@ footer {
 footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* 社交媒體連結樣式 */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  margin: 0 10px; /* 調整間距 */
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+.social-link i {
+  margin-right: 8px; /* 圖標與文字的間距 */
+  font-size: 1.2rem; /* 圖標大小 */
+}
+
+/* Facebook 圖標顏色 */
+.fa-facebook {
+  color: #1877f2; /* Facebook 藍色 */
+}
+
+/* Line 圖標顏色 */
+.fa-line {
+  color: #00c300; /* Line 綠色 */
+}
+
+/* Instagram 圖標顏色 */
+.fa-instagram {
+  color: #e4405f; /* Instagram 粉色 */
 }
 
 /* 響應式設計 */
@@ -160,4 +226,9 @@ footer p {
   form {
     padding: 1rem;
   }
+}
+
+
+.maindes{
+  margin-top: 6rem;
 }

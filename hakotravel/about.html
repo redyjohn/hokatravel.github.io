@@ -39,52 +39,29 @@
         </div>
     </nav>
     <!-- 登入頁面 -->
-    <div class="container m-5 d-flex justify-content-center align-items-center vh-100">
-        <div class="card shadow-lg p-4" style="width: 400px;">
-            <ul class="nav nav-tabs mb-3" id="authTabs">
-                <li class="nav-item">
-                    <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login">登入</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register">註冊</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <!-- 登入表單 -->
-                <div class="tab-pane fade show active" id="login">
-                    <form>
-                        <div class="mb-3">
-                            <label for="loginEmail" class="form-label">電子郵件</label>
-                            <input type="email" class="form-control" id="loginEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="loginPassword" class="form-label">密碼</label>
-                            <input type="password" class="form-control" id="loginPassword" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">登入</button>
-                    </form>
-                </div>
-                <!-- 註冊表單 -->
-                <div class="tab-pane fade" id="register">
-                    <form>
-                        <div class="mb-3">
-                            <label for="registerEmail" class="form-label">電子郵件</label>
-                            <input type="email" class="form-control" id="registerEmail" required placeholder="haoke@com.tw">
-                        </div>
-                        <div class="mb-3">
-                            <label for="registerPassword" class="form-label">密碼</label>
-                            <input type="password" class="form-control" id="registerPassword" required placeholder="請輸入密碼">
-                        </div>
-                        <div class="mb-3">
-                            <label for="confirmPassword" class="form-label">確認密碼</label>
-                            <input type="password" class="form-control" id="confirmPassword" required placeholder="請再次輸入密碼">
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">註冊</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      <!-- about-us 內容 -->
+  <div class="container about-us my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1>關於好客旅行社</h1>
+        <p>
+          好客旅行社致力於提供最優質、最獨特的旅行體驗。我們相信每一次旅行都是一場人生的冒險，
+          帶您探索未知、體驗多元文化，並創造難忘回憶。
+        </p>
+        <h3>我們的使命</h3>
+        <p>
+          為每一位旅客量身打造專屬行程，無論是深度文化探索、輕鬆度假或冒險之旅，我們都希望成為您最信賴的旅伴。
+        </p>
+        <h3>專業團隊</h3>
+        <p>
+          擁有多年規劃經驗的專業團隊，從行程設計到現場支援，全程陪伴您享受安心且精彩的旅行體驗。
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="./img/aboutus.jpg" alt="關於我們" class="img-fluid rounded">
+      </div>
     </div>
+  </div>
     <!-- 頁尾 -->
     <footer class="bg-dark text-white text-center py-4">
         <p>&copy; 2023 好客旅行社. 版權所有。</p>

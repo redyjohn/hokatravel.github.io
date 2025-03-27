@@ -124,6 +124,7 @@ logo&大標題#C9A600
   border-radius: 10px 10px 0 0;
 }
 
+
 .login-page .btn-primary {
   background-color: var(--sec-color);
   border: none;
@@ -149,17 +150,18 @@ logo&大標題#C9A600
 }
 
 .login-page .form-control::placeholder {
-  color: gray;
+  color: rgb(156, 155, 155);
   opacity: 1;
 }
 
-/* 讓密碼切換 icon 垂直置中 */
-.login-page .position-relative i {
+/* 修改位置：新增 eye-icon 樣式，確保圖標垂直置中 */
+.login-page .position-relative .eye-icon {
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  font-size: 1em; /* 確保圖標大小與父容器一致 */
 }
 
 /* 聯絡表單樣式 */

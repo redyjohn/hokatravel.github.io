@@ -60,9 +60,11 @@
                             </div>
                             <div class="mb-3 position-relative">
                                 <label for="loginPassword" class="form-label">密碼</label>
-                                <input type="password" class="form-control" id="loginPassword" required placeholder="請輸入密碼">
-                                <!-- 修改位置：移除 style 中的 top 和 transform，改用 CSS 控制 -->
-                                <i class="fas fa-eye-slash position-absolute eye-icon" onclick="togglePassword('loginPassword')"></i>
+                                <div class="inoutcol">
+                                    <input type="password" class="form-control" id="loginPassword" required placeholder="請輸入密碼">
+                                    <!-- 修改位置：移除 style 中的 top 和 transform，改用 CSS 控制 -->
+                                    <i class="fas fa-eye-slash position-absolute eye-icon" onclick="togglePassword('loginPassword')"></i>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">登入</button>
                         </form>
@@ -76,17 +78,19 @@
                             </div>
                             <div class="mb-3 position-relative">
                                 <label for="registerPassword" class="form-label">密碼</label>
-                                <input type="password" class="form-control" id="registerPassword" required placeholder="請輸入密碼">
-                                <!-- 修改位置：移除 style 中的 top 和 transform，改用 CSS 控制 -->
-                                <div class="eye-icon">
+                                <div class="inoutcol">
+                                    <input type="password" class="form-control" id="registerPassword" required placeholder="請輸入密碼">
+                                    <!-- 修改位置：移除 style 中的 top 和 transform，改用 CSS 控制 -->
                                     <i class="fas fa-eye-slash position-absolute eye-icon" onclick="togglePassword('registerPassword')"></i>
-                                </div>  
+                                </div>
                             </div>
                             <div class="mb-3 position-relative">
                                 <label for="confirmPassword" class="form-label">確認密碼</label>
-                                <input type="password" class="form-control" id="confirmPassword" required placeholder="請再次輸入密碼">
-                                <!-- 修改位置：移除 style 中的 top 和 transform，改用 CSS 控制 -->
-                                <i class="fas fa-eye-slash position-absolute eye-icon" onclick="togglePassword('confirmPassword')"></i>
+                                <div class="inoutcol">
+                                    <input type="password" class="form-control" id="confirmPassword" required placeholder="請再次輸入密碼">
+                                    <!-- 修改位置：移除 style 中的 top 和 transform，改用 CSS 控制 -->
+                                    <i class="fas fa-eye-slash position-absolute eye-icon" onclick="togglePassword('confirmPassword')"></i>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-success w-100">註冊</button>
                         </form>

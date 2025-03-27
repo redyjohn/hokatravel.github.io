@@ -153,15 +153,29 @@ logo&大標題#C9A600
   color: rgb(156, 155, 155);
   opacity: 1;
 }
+.inoutcol{
+  position: relative;
+}
 
-/* 修改位置：新增 eye-icon 樣式，確保圖標垂直置中 */
-.login-page .position-relative .eye-icon {
+/* 眼睛圖示樣式 */
+.eye-icon {
   position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 10px; /* 距離右邊緣的距離 */
+  top: 50%; /* 從頂部開始 50% 位置 */
+  transform: translateY(-50%); /* 向上移動自身高度的50%以實現垂直居中 */
   cursor: pointer;
-  font-size: 1em; /* 確保圖標大小與父容器一致 */
+  color: #6c757d; /* 圖標顏色 */
+  z-index: 2; /* 確保圖標顯示在輸入框上方 */
+}
+
+/* 調整輸入框的右邊距，避免文字被圖標遮蓋 */
+.form-control[type="password"] {
+  padding-right: 35px; /* 留出足夠空間給眼睛圖示 */
+}
+
+/* 可選：添加圖標懸停效果 */
+.eye-icon:hover {
+  color: var(--sec-color); /* 使用您定義的次要顏色 */
 }
 
 /* 聯絡表單樣式 */

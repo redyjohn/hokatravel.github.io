@@ -1,4 +1,4 @@
-const API_KEY = 'YOUR_YOUTUBE_API_KEY' // <-- 替換成你的金鑰
+const API_KEY = 'AIzaSyBoBluiwJEmslSiPQdFJHfD1ehfINexnvE' // <-- 替換成你的金鑰
 const PLAYLIST_ID = 'PLadf_ia2rR2Jkdd6gsXd_u0ksykkoEXyO'
 
 let videos = []

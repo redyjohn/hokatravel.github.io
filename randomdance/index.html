@@ -1,172 +1,32 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音樂播放清單</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        h1 {
-            color: #ff0000;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .container {
-            display: flex;
-            gap: 20px;
-        }
-        .player-section {
-            flex: 2;
-        }
-        .playlist-section {
-            flex: 1;
-        }
-        #video-player {
-            width: 100%;
-            height: 450px;
-            background-color: #000;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .controls {
-            margin: 20px 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-        }
-        button {
-            padding: 10px 15px;
-            cursor: pointer;
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #cc0000;
-        }
-        button:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-        }
-        select {
-            padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-        .playlist {
-            list-style: none;
-            padding: 0;
-            max-height: 600px;
-            overflow-y: auto;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .playlist-item {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.2s;
-            position: relative;
-        }
-        .playlist-item:hover {
-            background-color: #f9f9f9;
-        }
-        .playlist-item input {
-            margin-right: 12px;
-        }
-        .playlist-item.playing {
-            background-color: #fff0f0;
-            font-weight: bold;
-        }
-        .playlist-item.unplayable {
-            opacity: 0.6;
-            background-color: #ffecec;
-        }
-        .playlist-item.unplayable::after {
-            content: "不可播放";
-            position: absolute;
-            right: 15px;
-            color: #ff4444;
-            font-size: 0.8em;
-            font-style: italic;
-        }
-        .video-title {
-            flex-grow: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .video-thumbnail {
-            width: 40px;
-            height: 30px;
-            margin-right: 10px;
-            object-fit: cover;
-            border-radius: 3px;
-        }
-        .status {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .loading {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            #video-player {
-                height: 300px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>YouTube 播放器</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 5px 10px; }
+  </style>
 </head>
 <body>
-    <h1>YouTube 音樂播放清單</h1>
-    
-    <div class="container">
-        <div class="player-section">
-            <div id="video-player"></div>
-            <div class="controls">
-                <button id="play-btn">播放</button>
-                <button id="pause-btn" disabled>暫停</button>
-                <button id="next-btn" disabled>下一首</button>
-                <select id="play-mode">
-                    <option value="sequential">順序播放</option>
-                    <option value="random">隨機播放</option>
-                </select>
-                <button id="clear-btn">清除選擇</button>
-                <button id="select-all-btn">全選</button>
-            </div>
-            <div class="status" id="status">請選擇要播放的歌曲</div>
-        </div>
-        
-        <div class="playlist-section">
-            <h2>播放清單 (共 <span id="total-count">0</span> 首, 選中 <span id="selected-count">0</span> 首)</h2>
-            <ul class="playlist" id="playlist">
-                <li class="loading">載入播放清單中...</li>
-            </ul>
-        </div>
-    </div>
-    
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="app.js"></script>
+  <h1>🎬 YouTube 播放清單播放器</h1>
+
+  <select id="videoSelect">
+    <option value="">請選擇影片</option>
+  </select>
+
+  <div>
+    <button onclick="playSelected()">▶️ 播放選取</button>
+    <button onclick="playSequential()">📼 依序播放</button>
+    <button onclick="playRandom()">🎲 隨機播放</button>
+    <button onclick="pauseVideo()">⏸ 暫停</button>
+    <button onclick="resumeVideo()">▶️ 繼續</button>
+  </div>
+
+  <div id="player" style="margin-top: 20px;"></div>
+
+  <!-- YouTube Player API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
 </body>
 </html>
